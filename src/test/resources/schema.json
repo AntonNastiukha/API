@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "MRData": {
+      "type": "object",
+      "properties": {
+        "xmlns": {
+          "type": "string"
+        },
+        "series": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "string"
+        },
+        "offset": {
+          "type": "string"
+        },
+        "total": {
+          "type": "string"
+        },
+        "ConstructorTable": {
+          "type": "object",
+          "properties": {
+            "season": {
+              "type": "string"
+            },
+            "Constructors": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "constructorId": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "nationality": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "constructorId",
+                    "url",
+                    "name",
+                    "nationality"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "season",
+            "Constructors"
+          ]
+        }
+      },
+      "required": [
+        "xmlns",
+        "series",
+        "url",
+        "limit",
+        "offset",
+        "total",
+        "ConstructorTable"
+      ]
+    }
+  },
+  "required": [
+    "MRData"
+  ]
+}
